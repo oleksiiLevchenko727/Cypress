@@ -1,27 +1,26 @@
-class  LoginPage {
-  elements = {
-    emailInput: () => cy.get('input[name="email"]'),
-    passwordInput: () => cy.get('input[name="password"]'),
-    loginButton: () => cy.get('button[type="submit"]')
+class  ForstudyPage {
+
+  elementsHeader = {
+    headerLogo: () => cy.get('a[routerlink="/"][class="header_logo"]'),
+    homeButton: () => cy.get('a[routerlink="/"][routerlinkactive="-active"]'),
+    aboutButton: () => cy.get('button[appscrollto="aboutSection"]'),
+    contactsButton: () => cy.get('button[appscrollto="contactsSection"]'),
+    guestLoginButton: () => cy.get('button[class*="-guest"]'),
+    signInButton: () => cy.get('button[class*="header_signin"]'), 
+    lowerSignInButton: () => cy.get('button[class*="btn-primary"]')
   }
 
-  typeEmail(email) {
-    this.elements.emailInput().type(email);
+  elementsFooter = {
+    facebookButton: () => cy.get('a[href="https://www.facebook.com/Hillel.IT.School"]'),
+    telegramButton: () => cy.get('a[href="https://t.me/ithillel_kyiv"]'),
+    youtubeButton: () => cy.get('a[href="https://www.youtube.com/user/HillelITSchool?sub_confirmation=1"]'),
+    instagrammButton: () => cy.get('a[href="https://www.instagram.com/hillel_itschool/"]'),
+    linkedInButton: () => cy.get('a[href="https://www.linkedin.com/school/ithillel/"]'),
+    itHillelButton: () => cy.get('a[href="https://ithillel.ua"]'),
+    supportButton: () => cy.get('a[href="mailto:developer@ithillel.ua"]')
   }
 
-  typePassword(password) {
-    this.elements.passwordInput().type(password);
-  }
-
-  clickLogin() {
-    this.elements.loginButton().click();
-  }
-
-  login(email, password) {
-    this.typeEmail(email);
-    this.typePassword(password);
-    this.clickLogin();
-  }
+ 
 }
 
-export default new LoginPage();
+export default new ForstudyPage();

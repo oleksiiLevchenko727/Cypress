@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-12-16T14:19:03.476Z",
+    "end": "2025-12-16T14:19:04.135Z",
+    "duration": 659,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6bfcae38-eadb-473f-9b51-1530adc03b17",
+      "title": "",
+      "fullFile": "cypress\\e2e\\editCarsFunctionality.cy.js",
+      "file": "cypress\\e2e\\editCarsFunctionality.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52874e99-d1bf-45bd-9531-3486e053d66e",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should create a car and edit cars values with Fuel expences tab.",
+              "fullTitle": "Login test Should create a car and edit cars values with Fuel expences tab.",
+              "timedOut": null,
+              "duration": 573,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_loginPageTrue.default.elementsHeader.logInButton().click();\n_loginPageTrue.default.loginField.emailField().type(Cypress.env('userEmail'));\n_loginPageTrue.default.loginField.passwordField().type(Cypress.env('userPassword'), {\n  sensitive: true\n});\n_loginPageTrue.default.loginField.loginButton().click();\ncy.url().should('include', '/panel/garage');\n_loginPageTrue.default.addCar();\ncy.get('[class*=\"car_name\"]').should('be.visible').and('contain.text', 'BMW 5');\n_loginPageTrue.default.fuelExpensesTab();\ncy.get('#carSelectDropdown').should('be.visible').and('contain.text', 'BMW 5');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://qauto2.forstudy.space/\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login test`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://qauto2.forstudy.space/\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login test`\n    at <unknown> (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:134626:76)\n    at visitFailedByErr (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:134216:12)\n    at <unknown> (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:134609:13)\n    at tryCatcher (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://qauto2.forstudy.space/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///../e2e/editCarsFunctionality.cy.js:6:7)",
+                "diff": null
+              },
+              "uuid": "84d12c13-2761-423b-af49-b8d14901fb36",
+              "parentUUID": "52874e99-d1bf-45bd-9531-3486e053d66e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "84d12c13-2761-423b-af49-b8d14901fb36"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 573,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

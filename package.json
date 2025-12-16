@@ -13,7 +13,18 @@
   "scripts": {
   
     
-  "test": "cypress run"
+  "test": "cypress run",
+  "cy:qauto": "cypress run --config-file cypress/config/qauto.config.js",
+  "cy:qauto2": "cypress run --config-file cypress/config/qauto2.config.js",
+  "cy:qauto:open": "cypress open --config-file cypress/config/qauto.config.js",
+  "cy:qauto2:open": "cypress open --config-file cypress/config/qauto2.config.js"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "cypress-mochawesome-reporter": "^4.0.2"
   
   }
 }
